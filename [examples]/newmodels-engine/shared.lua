@@ -97,6 +97,7 @@ function createVehicle(id, ...)
 	assert(type(id)=="number", "Invalid model ID passed: "..tostring(id))
 	local vehicle = createElementSafe("vehicle", id, ...)
 	setElementResource(vehicle, sourceResource)
+	loadHandling(vehicle, id)
 	return vehicle
 end
 
